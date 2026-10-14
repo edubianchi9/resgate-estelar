@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/jogador.gd" id="1_jogador"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jogador"]
+radius = 11.0
+
+[node name="Jogador" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_jogador")
+
+[node name="Sombra" type="Polygon2D" parent="."]
+position = Vector2(0, 8)
+color = Color(0.015, 0.025, 0.04, 0.55)
+polygon = PackedVector2Array(-10, -2, -8, -6, -4, -8, 4, -8, 8, -6, 10, -2, 10, 2, 8, 6, 4, 8, -4, 8, -8, 6, -10, 2)
+
+[node name="Traje" type="Polygon2D" parent="."]
+color = Color(0.2, 0.68, 0.76, 1)
+polygon = PackedVector2Array(-8, -9, 8, -9, 10, -5, 9, 5, 6, 12, -6, 12, -9, 5, -10, -5)
+
+[node name="Capacete" type="Polygon2D" parent="."]
+color = Color(0.82, 0.9, 0.88, 1)
+polygon = PackedVector2Array(-6, -10, -6, -14, -4, -17, -2, -18, 2, -18, 4, -17, 6, -14, 6, -10, 4, -8, -4, -8)
+
+[node name="Visor" type="Polygon2D" parent="."]
+color = Color(0.12, 0.28, 0.36, 1)
+polygon = PackedVector2Array(-4, -14, -2, -16, 2, -16, 4, -14, 4, -12, 2, -11, -2, -11, -4, -12)
+
+[node name="Sinalizador" type="Polygon2D" parent="."]
+color = Color(1, 0.72, 0.32, 1)
+polygon = PackedVector2Array(-2, -20, 2, -20, 2, -18, -2, -18)
+
+[node name="Colisao" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jogador")

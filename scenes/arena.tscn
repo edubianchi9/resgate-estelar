@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://entities/jogador.tscn" id="1_jogador"]
+
+[sub_resource type="RectangleShape2D" id="ParedeHorizontal"]
+size = Vector2(1152, 44)
+
+[sub_resource type="RectangleShape2D" id="ParedeVertical"]
+size = Vector2(44, 648)
+
+[node name="Arena" type="Node2D"]
+
+[node name="Piso" type="Polygon2D" parent="."]
+color = Color(0.065, 0.09, 0.125, 1)
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="JuntasPiso" type="Node2D" parent="."]
+
+[node name="HorizontalSuperior" type="Line2D" parent="JuntasPiso"]
+points = PackedVector2Array(48, 162, 1104, 162)
+width = 2.0
+default_color = Color(0.09, 0.125, 0.16, 1)
+
+[node name="HorizontalInferior" type="Line2D" parent="JuntasPiso"]
+points = PackedVector2Array(48, 486, 1104, 486)
+width = 2.0
+default_color = Color(0.09, 0.125, 0.16, 1)
+
+[node name="VerticalEsquerda" type="Line2D" parent="JuntasPiso"]
+points = PackedVector2Array(288, 48, 288, 600)
+width = 2.0
+default_color = Color(0.09, 0.125, 0.16, 1)
+
+[node name="VerticalCentro" type="Line2D" parent="JuntasPiso"]
+points = PackedVector2Array(576, 48, 576, 600)
+width = 2.0
+default_color = Color(0.09, 0.125, 0.16, 1)
+
+[node name="VerticalDireita" type="Line2D" parent="JuntasPiso"]
+points = PackedVector2Array(864, 48, 864, 600)
+width = 2.0
+default_color = Color(0.09, 0.125, 0.16, 1)
+
+[node name="Jogador" parent="." instance=ExtResource("1_jogador")]
+position = Vector2(576, 324)
+
+[node name="Paredes" type="Node2D" parent="."]
+
+[node name="Superior" type="StaticBody2D" parent="Paredes"]
+position = Vector2(576, 22)
+
+[node name="Visual" type="Polygon2D" parent="Paredes/Superior"]
+color = Color(0.19, 0.27, 0.35, 1)
+polygon = PackedVector2Array(-576, -22, 576, -22, 576, 22, -576, 22)
+
+[node name="BordaInterna" type="Line2D" parent="Paredes/Superior"]
+points = PackedVector2Array(-576, 20, 576, 20)
+width = 3.0
+default_color = Color(0.31, 0.48, 0.55, 1)
+
+[node name="Colisao" type="CollisionShape2D" parent="Paredes/Superior"]
+shape = SubResource("ParedeHorizontal")
+
+[node name="Inferior" type="StaticBody2D" parent="Paredes"]
+position = Vector2(576, 626)
+
+[node name="Visual" type="Polygon2D" parent="Paredes/Inferior"]
+color = Color(0.19, 0.27, 0.35, 1)
+polygon = PackedVector2Array(-576, -22, 576, -22, 576, 22, -576, 22)
+
+[node name="BordaInterna" type="Line2D" parent="Paredes/Inferior"]
+points = PackedVector2Array(-576, -20, 576, -20)
+width = 3.0
+default_color = Color(0.31, 0.48, 0.55, 1)
+
+[node name="Colisao" type="CollisionShape2D" parent="Paredes/Inferior"]
+shape = SubResource("ParedeHorizontal")
+
+[node name="Esquerda" type="StaticBody2D" parent="Paredes"]
+position = Vector2(22, 324)
+
+[node name="Visual" type="Polygon2D" parent="Paredes/Esquerda"]
+color = Color(0.19, 0.27, 0.35, 1)
+polygon = PackedVector2Array(-22, -324, 22, -324, 22, 324, -22, 324)
+
+[node name="BordaInterna" type="Line2D" parent="Paredes/Esquerda"]
+points = PackedVector2Array(20, -324, 20, 324)
+width = 3.0
+default_color = Color(0.31, 0.48, 0.55, 1)
+
+[node name="Colisao" type="CollisionShape2D" parent="Paredes/Esquerda"]
+shape = SubResource("ParedeVertical")
+
+[node name="Direita" type="StaticBody2D" parent="Paredes"]
+position = Vector2(1130, 324)
+
+[node name="Visual" type="Polygon2D" parent="Paredes/Direita"]
+color = Color(0.19, 0.27, 0.35, 1)
+polygon = PackedVector2Array(-22, -324, 22, -324, 22, 324, -22, 324)
+
+[node name="BordaInterna" type="Line2D" parent="Paredes/Direita"]
+points = PackedVector2Array(-20, -324, -20, 324)
+width = 3.0
+default_color = Color(0.31, 0.48, 0.55, 1)
+
+[node name="Colisao" type="CollisionShape2D" parent="Paredes/Direita"]
+shape = SubResource("ParedeVertical")
