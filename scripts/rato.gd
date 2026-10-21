@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Rato
 
+signal alcancou_aliado(aliado: Node2D)
+
 @export var velocidade: float = 52.0
 @export var intervalo_dano: float = 0.85
 
@@ -8,6 +10,7 @@ var alvo: Node2D
 var _recarga_dano: float = 0.0
 
 @onready var area_deteccao: Area2D = $Deteccao
+@onready var area_aliado: Area2D = $DeteccaoAliado
 
 
 func _physics_process(delta: float) -> void:
@@ -20,6 +23,7 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 		move_and_slide()
 	_processar_contato()
+	_processar_aliado()
 
 
 func receber_golpe() -> void:
@@ -32,3 +36,10 @@ func _processar_contato() -> void:
 			if corpo.has_method("receber_dano"):
 				corpo.receber_dano()
 			_recarga_dano = intervalo_dano
+
+
+func _processar_aliado() -> void:
+	for corpo in area_aliado.get_overlapping_bodies():
+		if corpo.is_in_group("aliados"):
+			alcancou_aliado.emit(corpo)
+			return

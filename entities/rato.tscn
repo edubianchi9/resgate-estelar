@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/rato.gd" id="1_rato"]
 
@@ -7,6 +7,9 @@ radius = 10.0
 
 [sub_resource type="CircleShape2D" id="AreaContato"]
 radius = 16.0
+
+[sub_resource type="CircleShape2D" id="AreaAliado"]
+radius = 14.0
 
 [node name="Rato" type="CharacterBody2D" groups=["inimigos"]]
 collision_layer = 4
@@ -35,3 +38,9 @@ collision_mask = 2
 
 [node name="Alcance" type="CollisionShape2D" parent="Deteccao"]
 shape = SubResource("AreaContato")
+
+[node name="DeteccaoAliado" type="Area2D" parent="."]
+collision_mask = 8
+
+[node name="AlcanceAliado" type="CollisionShape2D" parent="DeteccaoAliado"]
+shape = SubResource("AreaAliado")

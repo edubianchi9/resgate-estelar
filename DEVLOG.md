@@ -33,3 +33,20 @@ Ainda faltam os aliados seguidores, a contagem de resgates, a vitória por resga
 ### Conferência
 
 O projeto foi importado e executado no Godot 4.7.2. A execução mostrou a arena, dois ratos perseguindo o personagem, o HUD `VIDA 3/3` e a tela de derrota após a vida chegar a zero. A captura deste estado foi salva em `screenshots/aula-09-checkpoint-1.jpg`. A tecla Enter está mapeada para reiniciar, mas não foi possível confirmar essa entrada usando o teclado sintético do editor.
+
+## Aula 09 — checkpoint 2
+
+**Data:** 21/10/2026
+
+### Trabalho desta etapa
+
+- Criados cinco aliados que podem ser resgatados ao encostar neles.
+- Aliados resgatados seguem o jogador em fila, e a interface mostra a contagem de `0/5` a `5/5`.
+- Resgatar os cinco aliados encerra a partida com vitória.
+- Se um rato alcançar um aliado resgatado, a partida termina com derrota.
+
+Esta etapa foi feita com assistência do Codex. O aluno deve revisar e conseguir explicar o resgate, a fila e as condições de fim da partida.
+
+### Conferência
+
+O projeto foi carregado e a cena principal foi iniciada no Godot 4.7.2 em modo headless, sem mensagens de erro no registro. Ainda falta conferir no editor, usando o teclado, o resgate dos cinco aliados, o seguimento em fila, a vitória e a derrota quando um rato alcançar um aliado. A captura disponível no README é do checkpoint 1.

@@ -11,7 +11,7 @@ Projeto de Jogos Digitais II. O jogo está sendo construído por etapas, conform
 - **Vitória:** resgatar os cinco aliados.
 - **Derrota:** perder toda a vida ou deixar um rato alcançar a fila.
 
-Esses objetivos descrevem o projeto completo. Até aqui, a Aula 08 entregou a arena e o movimento; o primeiro checkpoint da Aula 09 acrescenta vida, ratos perseguidores e ataque. Ainda faltam os aliados, a contagem de resgates, a vitória por resgatar os cinco e a derrota se um rato alcançar a fila.
+Esses objetivos descrevem o projeto completo. A Aula 08 entregou a arena e o movimento. Na Aula 09, o primeiro checkpoint acrescentou vida, ratos perseguidores e ataque; o segundo acrescenta aliados seguidores, contagem de resgates e condições de vitória e derrota. O desvio dos ratos ao redor de obstáculos fica para uma etapa posterior.
 
 ## Controles atuais
 
