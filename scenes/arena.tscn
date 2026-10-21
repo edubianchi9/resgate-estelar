@@ -105,3 +105,5 @@ default_color = Color(0.31, 0.48, 0.55, 1)
 
 [node name="Colisao" type="CollisionShape2D" parent="Paredes/Direita"]
 shape = SubResource("ParedeVertical")
+
+[node name="Entidades" type="Node2D" parent="."]

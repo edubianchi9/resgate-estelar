@@ -1,6 +1,6 @@
 # Resgate Estelar
 
-Projeto de Jogos Digitais II. A primeira etapa implementa a arena da Aula 08 e o movimento básico do personagem.
+Projeto de Jogos Digitais II. O jogo está sendo construído por etapas, conforme o conteúdo de cada aula.
 
 ## Carta do jogo
 
@@ -11,11 +11,13 @@ Projeto de Jogos Digitais II. A primeira etapa implementa a arena da Aula 08 e o
 - **Vitória:** resgatar os cinco aliados.
 - **Derrota:** perder toda a vida ou deixar um rato alcançar a fila.
 
-Esses objetivos descrevem o projeto completo. Neste primeiro marco, ainda estão implementados somente a arena fechada e o movimento do personagem.
+Esses objetivos descrevem o projeto completo. Até aqui, a Aula 08 entregou a arena e o movimento; o primeiro checkpoint da Aula 09 acrescenta vida, ratos perseguidores e ataque. Ainda faltam os aliados, a contagem de resgates, a vitória por resgatar os cinco e a derrota se um rato alcançar a fila.
 
 ## Controles atuais
 
 - **Mover:** setas ou `W`, `A`, `S`, `D`.
+- **Atacar:** `Espaço`.
+- **Reiniciar depois da derrota:** `Enter`.
 
 ## Como abrir
 
@@ -23,7 +25,7 @@ Esses objetivos descrevem o projeto completo. Neste primeiro marco, ainda estão
 2. Importe o arquivo `project.godot` desta pasta.
 3. Execute o projeto com **F6** para testar a cena aberta ou **F5** para iniciar a cena principal.
 
-## Captura da arena
+## Captura do primeiro checkpoint da Aula 09
 
-![Arena da Aula 08 em execução no Godot](screenshots/aula-08.png)
+![Resgate Estelar em execução no Godot](screenshots/aula-09-checkpoint-1.jpg)
 

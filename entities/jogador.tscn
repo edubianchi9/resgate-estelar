@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/jogador.gd" id="1_jogador"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jogador"]
 radius = 11.0
 
-[node name="Jogador" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RetanguloAtaque"]
+size = Vector2(26, 18)
+
+[node name="Jogador" type="CharacterBody2D" groups=["jogador"]]
 collision_layer = 2
 collision_mask = 1
 script = ExtResource("1_jogador")
@@ -33,3 +36,17 @@ polygon = PackedVector2Array(-2, -20, 2, -20, 2, -18, -2, -18)
 
 [node name="Colisao" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jogador")
+
+[node name="Ataque" type="Area2D" parent="."]
+collision_mask = 4
+monitoring = false
+
+[node name="Alcance" type="CollisionShape2D" parent="Ataque"]
+shape = SubResource("RetanguloAtaque")
+disabled = true
+
+[node name="Efeito" type="Polygon2D" parent="Ataque"]
+visible = false
+position = Vector2(18, 0)
+color = Color(1, 0.72, 0.32, 0.8)
+polygon = PackedVector2Array(6, -9, 15, -7, 22, 0, 15, 7, 6, 9)
