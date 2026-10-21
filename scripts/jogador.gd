@@ -1,3 +1,4 @@
+# Origem: código desenvolvido com assistência do ChatGPT.
 extends CharacterBody2D
 class_name Jogador
 

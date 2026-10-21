@@ -1,3 +1,4 @@
+# Origem: código desenvolvido com assistência do ChatGPT.
 extends Node2D
 
 @export var cena_rato: PackedScene = preload("res://entities/rato.tscn")
