@@ -1,4 +1,4 @@
-# Origem: código desenvolvido com assistência do ChatGPT.
+# Código desenvolvido com ajuda do ChatGPT.
 extends Node2D
 
 @export var cena_rato: PackedScene = preload("res://entities/rato.tscn")
@@ -67,6 +67,7 @@ func _gerar_rato(posicao: Vector2 = Vector2(-1, -1)) -> void:
 		posicao = _sortear_borda()
 	var rato := cena_rato.instantiate() as Rato
 	rato.alvo = jogador
+	rato.configurar_navegacao($Arena/Navegacao as NavegacaoArena)
 	rato.alcancou_aliado.connect(_encerrar_por_aliado)
 	$Arena/Entidades.add_child(rato)
 	rato.position = posicao

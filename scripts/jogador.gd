@@ -1,11 +1,11 @@
-# Origem: código desenvolvido com assistência do ChatGPT.
+# Código desenvolvido com ajuda do ChatGPT.
 extends CharacterBody2D
 class_name Jogador
 
 signal vidas_alteradas(vidas: int, maximo: int)
 signal derrotado
 
-## Velocidade inicial do personagem, em pixels por segundo.
+## Velocidade de movimento, em pixels por segundo.
 @export var velocidade: float = 180.0
 @export var vidas_maximas: int = 3
 @export var intervalo_ataque: float = 0.55
@@ -30,7 +30,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	# Input.get_vector limita a magnitude a 1, então a diagonal não fica mais rápida.
+	# Input.get_vector limita o tamanho do vetor a 1, então a diagonal não aumenta a velocidade.
 	var direcao := Input.get_vector("left", "right", "up", "down")
 	if direcao != Vector2.ZERO:
 		if absf(direcao.x) > absf(direcao.y):

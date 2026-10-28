@@ -1,4 +1,4 @@
-# Origem: código desenvolvido com assistência do ChatGPT.
+# Código desenvolvido com ajuda do ChatGPT.
 extends CharacterBody2D
 class_name Aliado
 
