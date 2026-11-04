@@ -1,4 +1,4 @@
-# Código desenvolvido com ajuda do ChatGPT.
+# Código feito com ajuda do ChatGPT.
 extends CharacterBody2D
 class_name Rato
 
@@ -18,9 +18,17 @@ var _estado: Estado = Estado.PERSEGUIR
 var _caminho: PackedVector2Array = PackedVector2Array()
 var _indice_caminho: int = 0
 var _tempo_recalculo_caminho: float = 0.0
+var _tempo_decisao: float = 0.0
+var _linha_bloqueada: bool = false
 
 @onready var area_deteccao: Area2D = $Deteccao
 @onready var area_aliado: Area2D = $DeteccaoAliado
+
+
+func _ready() -> void:
+	# O atraso inicial evita que todos consultem a visão no mesmo quadro.
+	_tempo_decisao = randf_range(0.0, 0.12)
+	_tempo_recalculo_caminho = randf_range(0.0, intervalo_recalculo_caminho)
 
 
 func _physics_process(delta: float) -> void:
@@ -30,9 +38,13 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 
-	if global_position.distance_to(alvo.global_position) <= distancia_ataque:
+	_tempo_decisao -= delta
+	if _tempo_decisao <= 0.0:
+		_linha_bloqueada = _linha_ate_alvo_bloqueada()
+		_tempo_decisao = 0.12
+	if global_position.distance_squared_to(alvo.global_position) <= distancia_ataque * distancia_ataque:
 		_estado = Estado.ATACAR
-	elif _linha_ate_alvo_bloqueada():
+	elif _linha_bloqueada:
 		_estado = Estado.CONTORNAR
 	else:
 		_estado = Estado.PERSEGUIR
@@ -48,6 +60,8 @@ func _physics_process(delta: float) -> void:
 		Estado.ATACAR:
 			velocity = Vector2.ZERO
 	move_and_slide()
+	if not velocity.is_zero_approx():
+		$Arte.rotation = velocity.angle() + PI / 2.0
 	_processar_contato()
 	_processar_aliado()
 

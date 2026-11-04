@@ -35,7 +35,7 @@ Quero fazer para Jogos Digitais II um jogo curto de horda, visto de cima, dentro
 - `entities/` guarda as cenas do jogador, dos aliados e dos ratos.
 - `scripts/` guarda o movimento, a fila de aliados, o objetivo, as vidas, o ataque e o comportamento dos ratos.
 - `sprites/` é para arte própria ou recursos com autor, link e licença registrados no README.
-- A cena principal inicia a partida, conta os resgates e decide quando há vitória ou derrota. Cada entidade cuida do próprio comportamento e avisa a cena principal quando algo importante acontece.
+- A cena principal inicia a partida, conta os resgates e decide quando há vitória ou derrota. Cada entidade cuida do próprio comportamento e avisa a partida quando ocorre um resgate, dano ou contato com a fila.
 - Na Aula 10, os ratos ganham estados de comportamento e aprendem a contornar os obstáculos.
 - No começo, o jogo usa formas simples. A arte do tema entra na Aula 11, depois que a partida já funciona.
 

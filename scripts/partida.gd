@@ -1,9 +1,9 @@
-# Código desenvolvido com ajuda do ChatGPT.
+# Código feito com ajuda do ChatGPT.
 extends Node2D
 
 @export var cena_rato: PackedScene = preload("res://entities/rato.tscn")
 @export var cena_aliado: PackedScene = preload("res://entities/aliado.tscn")
-@export var limite_ratos: int = 4
+@export var limite_ratos: int = 24
 
 var _encerrada: bool = false
 var _gerador_aleatorio := RandomNumberGenerator.new()

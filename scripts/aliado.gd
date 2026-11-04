@@ -1,4 +1,4 @@
-# Código desenvolvido com ajuda do ChatGPT.
+# Código feito com ajuda do ChatGPT.
 extends CharacterBody2D
 class_name Aliado
 
@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 		var passos_necessarios := distancia - distancia_seguir
 		var velocidade_atual := minf(velocidade_seguir, passos_necessarios / delta)
 		velocity = global_position.direction_to(alvo_seguir.global_position) * velocidade_atual
+		$Arte.rotation = velocity.angle() + PI / 2.0
 	else:
 		velocity = Vector2.ZERO
 	move_and_slide()

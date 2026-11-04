@@ -1,6 +1,6 @@
 # Resgate Estelar
 
-Este é meu projeto de Jogos Digitais II. Estou montando o jogo aos poucos, acompanhando o conteúdo das aulas.
+Este é meu projeto de Jogos Digitais II. Vou acrescentando uma parte do jogo a cada aula.
 
 ## Carta do jogo
 
@@ -11,7 +11,9 @@ Este é meu projeto de Jogos Digitais II. Estou montando o jogo aos poucos, acom
 - Vitória: resgatar os cinco aliados.
 - Derrota: ficar sem vida ou deixar um rato alcançar a fila.
 
-Na Aula 08, fiz a arena e o movimento do personagem. Na Aula 09, acrescentei vidas, dano, ataque e o resgate dos aliados. Na Aula 10, coloquei caixas de carga e ensinei os ratos a contorná-las.
+Na Aula 08, montei a arena e programei o movimento. Na Aula 09, adicionei vidas, ataque e resgate. Na Aula 10, coloquei caixas de carga e ajustei os ratos para desviar delas.
+
+Na Aula 11, desenhei a nave, as caixas e os personagens e aumentei a horda para até 24 ratos. O traje do jogador é azul e o dos aliados, verde. Eles viram quando andam; depois de levar dano, o jogador pisca por um instante.
 
 ## Controles
 
@@ -23,6 +25,10 @@ As setas ou `W`, `A`, `S`, `D` movem o personagem. Use `Espaço` para atacar e `
 2. Importe o arquivo `project.godot` desta pasta.
 3. Aperte **F5** para iniciar a partida. **F6** executa a cena selecionada.
 
-## Captura do primeiro checkpoint da Aula 09
+## Arte e autoria
 
-![Resgate Estelar em execução no Godot](screenshots/aula-09-checkpoint-1.jpg)
+Desenhei os SVGs da nave, da caixa, do jogador, do aliado e do rato com ajuda do ChatGPT. Nesta etapa, não usei arte, fontes ou sons de outras pessoas. Os scripts que fiz com ajuda do ChatGPT têm essa informação no começo do arquivo.
+
+## Captura da Aula 11
+
+![Nave de carga, astronautas e ratos na arena](screenshots/aula-11.png)

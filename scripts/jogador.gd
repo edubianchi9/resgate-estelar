@@ -1,4 +1,4 @@
-# Código desenvolvido com ajuda do ChatGPT.
+# Código feito com ajuda do ChatGPT.
 extends CharacterBody2D
 class_name Jogador
 
@@ -30,7 +30,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	# Input.get_vector limita o tamanho do vetor a 1, então a diagonal não aumenta a velocidade.
+	# O limite de Input.get_vector mantém a mesma velocidade na diagonal.
 	var direcao := Input.get_vector("left", "right", "up", "down")
 	if direcao != Vector2.ZERO:
 		if absf(direcao.x) > absf(direcao.y):
@@ -39,6 +39,8 @@ func _physics_process(delta: float) -> void:
 			direcao_olhando = Vector2.DOWN if direcao.y > 0.0 else Vector2.UP
 
 	velocity = direcao * velocidade
+	$Arte.rotation = direcao_olhando.angle() + PI / 2.0
+	$Arte.modulate.a = 0.4 if _invulnerabilidade_restante > 0.0 and fmod(_invulnerabilidade_restante, 0.16) < 0.08 else 1.0
 	move_and_slide()
 
 	_recarga_ataque = maxf(_recarga_ataque - delta, 0.0)

@@ -1,4 +1,4 @@
-# Código desenvolvido com ajuda do ChatGPT.
+# Código feito com ajuda do ChatGPT.
 extends Node2D
 class_name NavegacaoArena
 
@@ -29,7 +29,7 @@ func obter_caminho(origem: Vector2, destino: Vector2) -> PackedVector2Array:
 
 	var ids := _grade.get_id_path(inicio, fim)
 	var caminho := PackedVector2Array()
-	# Se voltar ao centro da célula atual a cada recálculo, o rato oscila.
+	# Ignoro a célula atual para o rato não recuar a cada novo cálculo.
 	var primeira_etapa := 1 if inicio == celula_origem and ids.size() > 1 else 0
 	for indice in range(primeira_etapa, ids.size()):
 		caminho.append(_grade.get_point_position(ids[indice]))
