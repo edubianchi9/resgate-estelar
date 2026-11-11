@@ -2,6 +2,8 @@
 
 Este é meu projeto de Jogos Digitais II. Vou acrescentando uma parte do jogo a cada aula.
 
+[Jogue Resgate Estelar no navegador](https://eduardopiresbianchi.itch.io/resgate-estelar)
+
 ## Carta do jogo
 
 - Tema: uma nave de carga infestada por ratos espaciais.

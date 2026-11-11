@@ -80,3 +80,9 @@ Aumentei o limite da horda de quatro para 24 ratos. Cada rato consulta a linha d
 No Godot, conferi que movimento, colisões, ataque, resgate, vitória, derrota e reinício funcionam com a arte nova. A captura da partida está em `screenshots/aula-11.png`.
 
 Na simulação com renderização, o contador ficou em 200 FPS tanto com 24 quanto com 96 ratos, que é o limite do projeto. A física levou em média 0,58 ms e 1,72 ms, respectivamente. Usei a arena e deixei o alvo em movimento; esses números dependem do computador. O Godot não conseguiu gravar o cache de shaders neste ambiente, mas abriu a cena e salvou a captura.
+
+## Aula 12: versão Web
+
+Data: 11/11/2026
+
+Exportei o jogo para Web com o suporte a threads desativado. Abri a prévia da Godot no navegador e confirmei que o jogo carregou. A versão para navegador está na [página do Resgate Estelar no itch.io](https://eduardopiresbianchi.itch.io/resgate-estelar).
