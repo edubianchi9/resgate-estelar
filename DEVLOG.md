@@ -86,3 +86,9 @@ Na simulação com renderização, o contador ficou em 200 FPS tanto com 24 quan
 Data: 11/11/2026
 
 Exportei o jogo para Web com o suporte a threads desativado. Abri a prévia da Godot no navegador e confirmei que o jogo carregou. A versão para navegador está na [página do Resgate Estelar no itch.io](https://eduardopiresbianchi.itch.io/resgate-estelar).
+
+## Revisão da identificação de IA
+
+Data: 19/11/2026
+
+Depois do aviso do professor, registrei no início dos cinco scripts o apoio do ChatGPT na geração e revisão do código. No README, expliquei minha participação nas escolhas do jogo, nos testes, nos pedidos de correção, na exportação e na publicação. Também listei o que cada script faz e a ajuda recebida na montagem das cenas e na documentação.

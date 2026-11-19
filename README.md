@@ -31,6 +31,18 @@ As setas ou `W`, `A`, `S`, `D` movem o personagem. Use `Espaço` para atacar e `
 
 Desenhei os SVGs da nave, da caixa, do jogador, do aliado e do rato com ajuda do ChatGPT. Nesta etapa, não usei arte, fontes ou sons de outras pessoas. Os scripts que fiz com ajuda do ChatGPT têm essa informação no começo do arquivo.
 
+## Uso de IA no código
+
+Defini as escolhas do jogo, testei as versões no Godot, identifiquei problemas e pedi os ajustes durante o desenvolvimento. Também fiz a exportação e a publicação no itch.io. Usei o ChatGPT para tirar dúvidas sobre o código e a Godot, além de receber apoio na geração e revisão dos scripts.
+
+- `scripts/jogador.gd` cuida do movimento, das vidas, do dano e do ataque.
+- `scripts/aliado.gd` cuida do resgate e do movimento dos aliados na fila.
+- `scripts/rato.gd` cuida dos estados do inimigo, da perseguição, do desvio e do dano por contato.
+- `scripts/navegacao_arena.gd` monta a grade AStarGrid2D e calcula os caminhos.
+- `scripts/partida.gd` cria as entidades, atualiza o HUD e controla os resgates, a vitória, a derrota e o reinício.
+
+O ChatGPT também ajudou a montar as cenas e a documentação. Testei o jogo no Godot e pedi os ajustes descritos no DEVLOG.
+
 ## Captura da Aula 11
 
 ![Nave de carga, astronautas e ratos na arena](screenshots/aula-11.png)

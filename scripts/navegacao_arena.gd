@@ -1,4 +1,5 @@
-# Código feito com ajuda do ChatGPT.
+# Desenvolvido com apoio do ChatGPT na geração e revisão do código.
+# Inclui grade AStarGrid2D e cálculo dos caminhos, conforme os requisitos do projeto.
 extends Node2D
 class_name NavegacaoArena
 

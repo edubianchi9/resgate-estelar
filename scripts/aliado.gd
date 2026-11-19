@@ -1,4 +1,5 @@
-# Código feito com ajuda do ChatGPT.
+# Desenvolvido com apoio do ChatGPT na geração e revisão do código.
+# Inclui resgate e movimento dos aliados na fila, conforme os requisitos do projeto.
 extends CharacterBody2D
 class_name Aliado
 

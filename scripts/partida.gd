@@ -1,4 +1,5 @@
-# Código feito com ajuda do ChatGPT.
+# Desenvolvido com apoio do ChatGPT na geração e revisão do código.
+# Inclui criação de entidades, HUD, resgates, vitória, derrota e reinício, conforme os requisitos do projeto.
 extends Node2D
 
 @export var cena_rato: PackedScene = preload("res://entities/rato.tscn")

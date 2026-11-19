@@ -1,4 +1,5 @@
-# Código feito com ajuda do ChatGPT.
+# Desenvolvido com apoio do ChatGPT na geração e revisão do código.
+# Inclui estados, perseguição, desvio e dano por contato, conforme os requisitos do projeto.
 extends CharacterBody2D
 class_name Rato
 
